@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="curtain-container">
+    <div class="curtain__element curtain__element--left" >
+      <div class="test" libParticleEffectButton pParticlesAmountCoefficient=18 pOscillationCoefficient=250 [pSize]=14 pColor="#7fff00"
+      pEasing="easeInExpo" pType="circle" [pSpeed]=0.4 [pCanvasPadding]=250
+      pDuration=1200 [pHidden]="hidden" (click)="hidden=!hidden" pDirection="right">
+      </div>
+    </div>
+    <div class="curtain__element curtain__element--right">
+      <div class="test" libParticleEffectButton pParticlesAmountCoefficient=18 pOscillationCoefficient=200 [pSize]=14 pColor="#7fff00"
+      pEasing="easeInExpo" pType="circle" [pSpeed]=0.4 [pCanvasPadding]=250
+      pDuration=1200 [pHidden]="hidden" (click)="hidden=!hidden" pDirection="left">
+      </div>
+    </div>
+    <button class="action" (click)="hidden=!hidden">Reset</button>
+  </div>
+  
+</header>

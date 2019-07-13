@@ -1,0 +1,43 @@
+@import "../../shared/styles/default/style.scss";
+.header{
+    position: relative;
+    z-index: 999;
+    .curtain-container{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: $blue;
+        overflow: hidden;
+        
+    }
+    .curtain__element{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: inline-block;    
+    }
+    .curtain__element--left{
+    }
+    .curtain__element--left div {
+        width: 100%;
+        height: 100%;
+    }
+    .curtain__element--right{
+    }
+    .curtain__element--right div {
+        width: 100%;
+        height: 100%;
+    }
+    .test{
+        width: 100%;
+        height: 100px;
+        background-color: #7fff00;
+    }
+    .action{
+        position: absolute;
+        width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    }
+}
