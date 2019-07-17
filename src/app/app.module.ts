@@ -10,6 +10,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ParticleEffectButtonModule } from "angular-particle-effect-button";
+import { MainNavComponent } from './components/navigations/main-nav/main-nav.component';
+import { SideNavComponent } from './components/navigations/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ParticleEffectButtonModule } from "angular-particle-effect-button";
     AboutSkillsComponent,
     ContactComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
