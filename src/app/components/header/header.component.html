@@ -1,23 +1,14 @@
-<header  class="header" [ngStyle]="{'z-index': giveZIndex}" >
+<header  class="header" [ngStyle]="{'z-index': giveZIndex}" (click)="toggleHeader(true)" [ngClass]="status ? 'hide_header' : ''">
   <div id="header-cont" class="curtain-container content">
     <div class="header__image-container">
       <img class="header__image" src="../../../assets/images/me-code3v7.png" alt="image">
     </div>
-    <!-- <button class="action" id="start-btn" (click)="goToMainPage()">Reset</button> -->
-    <!-- <button class="action"  (click)="second()">Reset</button> -->
-    <!-- <div class="curtain__element curtain__element--left" >
-      <div class="test" libParticleEffectButton pParticlesAmountCoefficient=18 pOscillationCoefficient=270 [pSize]=12 pColor="#7fff00"
-      pEasing="easeInExpo" pType="circle" [pSpeed]=0.4 [pCanvasPadding]=250
-      pDuration=1200 [pHidden]="hidden" (click)="hidden=!hidden" pDirection="right" (pComplete)= afterOpenCurtain() >
-      </div>
-    </div>
-    <div class="curtain__element curtain__element--right">
-      <div class="test" libParticleEffectButton pParticlesAmountCoefficient=18 pOscillationCoefficient=270 [pSize]=12 pColor="#7fff00"
-      pEasing="easeInExpo" pType="circle" [pSpeed]=0.4 [pCanvasPadding]=250
-      pDuration=1200 [pHidden]="hidden" (click)="hidden=!hidden" pDirection="left">
-      </div>
-    </div>
-    <button class="action" (click)="hidden=!hidden">Reset</button> -->
   </div>
   
+  <!-- <div class="curtain_container-left">
+    <div class="header__image-containerr">
+      <img class="header__imagee" src="../../../assets/images/me-code3v7.png" alt="image">
+    </div>
+  </div> -->
+  <!-- <div class="shadow"></div> -->
 </header>

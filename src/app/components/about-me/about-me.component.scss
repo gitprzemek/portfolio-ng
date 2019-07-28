@@ -1,4 +1,9 @@
 .about-me{
-    background-color: coral;
+    background-color: #4b7dee;
+    background-image: radial-gradient( circle farthest-corner at 50% 10%,  rgb(111, 185, 232) 0%, rgba(111, 185, 232, 0.7) 40%, rgb(75, 125, 238) 94% );
     height: 100vh;
+    // background-image: url("../../../assets/images/AdobeStock_97588769.jpeg");
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
 }

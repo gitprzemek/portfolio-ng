@@ -13,10 +13,16 @@ export class HeaderComponent implements OnInit {
   hidden:any;
   giveZIndex: number;
   chance: any;
+  status: boolean;
 
   constructor() {
   }
 
+  toggleHeader(data) {
+    setTimeout(() => { 
+      this.status = data; 
+    }, 3500);
+  }
   ngOnInit() {
     
       var imageDataArray = [];
@@ -27,11 +33,8 @@ export class HeaderComponent implements OnInit {
         html2canvas($(".header__image")[0], {backgroundColor: 'transparent'}).then(canvas => {
           //capture all div data as image
           var ctx = canvas.getContext("2d");
-          console.log(ctx);
           var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          console.log(ctx);
           var pixelArr = imageData.data;
-          console.log(ctx);
           createBlankImageData(imageData);
           //put pixel info to imageDataArray (Weighted Distributed)
           for (let i = 0; i < pixelArr.length; i+=4) {
@@ -60,7 +63,8 @@ export class HeaderComponent implements OnInit {
               animateTransform($(this),100,-100,chance.integer({ min: -15, max: 15 }),800+(110*index));
             }, 70*index); 
             //remove the canvas from DOM tree when faded
-            $(this).delay(70*index).fadeOut((110*index)+800,"easeInQuint",()=> {$( this ).remove();});
+            $(this).delay(70*index).fadeOut((110*index)+800,"easeInQuint",()=> {$( this ).remove();
+            });
           });
         });
       });
