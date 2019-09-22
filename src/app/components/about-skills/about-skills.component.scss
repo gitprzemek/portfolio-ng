@@ -1,4 +1,9 @@
 .about-skills{
-    background-color: rgb(229, 125, 255);
+  //background-image: url("../../../assets/images/water jpg.jpg");
+  //background-size: contain;
+  //background-position: center;
+  //background-repeat: no-repeat;
     height: 100vh;
+  //background-image: radial-gradient( circle farthest-corner at 50% 10%,  rgb(111, 185, 232) 0%, rgba(111, 185, 232, 0.7) 40%, rgb(75, 125, 238) 94% );
+  background: linear-gradient(to bottom, #409991 1%,#193946 100%);
 }

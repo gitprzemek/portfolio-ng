@@ -1,4 +1,81 @@
 .about-projects{
-    background-color: rgb(72, 255, 0);
-    height: 100vh;
+  background: linear-gradient(to bottom, rgb(82, 138, 255) 0%, rgb(149, 215, 255) 94%);
+  height: 100vh;
+  position: relative;
+  &__bg-image1 {
+    position: absolute;
+    background-image: url("../../../assets/images/warstwa5-sun.png");
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  &__bg-image2 {
+    position: absolute;
+      background-image: url("../../../assets/images/chmury-duze.png");
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      margin: 0 auto;
+      animation: slide-clouds1 30s linear infinite;
+    }
+  &__bg-image3 {
+    position: absolute;
+    background-image: url("../../../assets/images/mountain-transp2.png");
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  &__bg-image4 {
+    position: absolute;
+    background-image: url("../../../assets/images/chmury-male.png");
+    background-size: auto;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+    animation: slide-clouds2 60s linear infinite;
+  }
+  &__bg-image5 {
+    position: absolute;
+    background-image: url("../../../assets/images/warstwa1v2.png");
+    background-size: auto;
+    background-position: 50% bottom;
+    background-repeat: repeat-x;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  &__wave-cont {
+    position: absolute;
+    background-image: url("../../../assets/images/fale2.png");
+    background-size: 900px auto;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+    border-bottom: 2px solid #409991;
+  }
+  @keyframes slide-clouds1 {
+    0% { background-position: 0 100%; }
+    100% { background-position: 1220px 100%; }
+  }
+  @keyframes slide-clouds2 {
+    0% { background-position: 0 100%; }
+    100% { background-position: 1220px 100%; }
+  }
 }

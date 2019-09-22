@@ -1,9 +1,82 @@
 .about-me{
-    background-color: #4b7dee;
-    background-image: radial-gradient( circle farthest-corner at 50% 10%,  rgb(111, 185, 232) 0%, rgba(111, 185, 232, 0.7) 40%, rgb(75, 125, 238) 94% );
+    //background-color: #4b7dee;
+    background-image: radial-gradient( ellipse closest-side at 50% 50%,  rgb(111, 185, 232) 0%, rgb(82, 138, 255) 95% );
+    //background: linear-gradient(to bottom, rgba(111, 185, 232, 0.7) 40%, rgb(75, 125, 238) 94%);
     height: 100vh;
     // background-image: url("../../../assets/images/AdobeStock_97588769.jpeg");
     // background-size: cover;
     // background-position: center;
     // background-repeat: no-repeat;
+    position: relative;
+  &__wrapper {
+    max-width: 1390px;
+  }
+
+  .house-container {
+    position: absolute;
+    width: 480px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__house-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .large-cloud {
+    position: absolute;
+    &--1 {
+      top: 20px;
+      left: 500px;
+      width: 697px; height: 364px;
+      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -663px;
+    }
+    &--2 {
+      width: 443px; height: 236px;
+      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -407px;
+    }
+    &--3 {
+      width: 229px; height: 147px;
+      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -10px;
+    }
+    &--4 {
+      width: 510px; height: 210px;
+      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -177px;
+    }
+  }
+
 }
+.bg-large_cloud1 {
+  width: 697px; height: 364px;
+  //background: url('css_sprites.png') -10px -663px;
+}
+
+.bg-large_cloud2 {
+  width: 443px; height: 236px;
+  //background: url('css_sprites.png') -10px -407px;
+}
+
+.bg-large_cloud3 {
+  width: 229px; height: 147px;
+  //background: url('css_sprites.png') -10px -10px;
+}
+.bg-large_cloud4 {
+  width: 510px; height: 210px;
+  //background: url('css_sprites.png') -10px -177px;
+}
+.bg-small_cloud1 {
+   width: 121px; height: 101px;
+   //background: url('css_sprites.png') -10px -189px;
+ }
+
+.bg-small_cloud2 {
+  width: 84px; height: 77px;
+  //background: url('css_sprites.png') -10px -92px;
+}
+
+.bg-small_cloud3 {
+  width: 60px; height: 62px;
+  //background: url('css_sprites.png') -10px -10px;
+}
+
