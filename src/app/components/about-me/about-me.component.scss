@@ -19,6 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
     &__house-image {
       width: 100%;
       height: auto;
@@ -26,26 +27,56 @@
   }
   .large-cloud {
     position: absolute;
+    width: 300px;
+    height: 170px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: all 5s linear;
     &--1 {
-      top: 20px;
-      left: 500px;
-      width: 697px; height: 364px;
-      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -663px;
+      top: 19%;
+      left: 32%;
+      background-image: url('../../../assets/images/css_sprites-large-cloud.png');
+      background-position: 0 103%;
+
     }
     &--2 {
-      width: 443px; height: 236px;
-      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -407px;
+      top: 23%;
+      left: 77%;
+      background-image: url('../../../assets/images/css_sprites-large-cloud.png');
+      background-position: 0 51%;
+      height: 110px;
     }
     &--3 {
-      width: 229px; height: 147px;
-      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -10px;
+      top: 74%;
+      left: 74%;
+      background-image: url('../../../assets/images/css_sprites-large-cloud.png');
+      background-position: 0 21%;
+      height: 90px;
     }
     &--4 {
-      width: 510px; height: 210px;
-      background: url('../../../assets/images/css_sprites-large-cloud.png') -10px -177px;
+      top: 45%;
+      left: 76%;
+      background-image: url('../../../assets/images/css_sprites-large-cloud.png');
+      background-position: 0 0;
+      height: 70px;
+      z-index: 3;
+      animation: waving 5s linear infinite;
     }
   }
 
+}
+@keyframes waving {
+  0% {
+    transform: translate(-50%, -44%);
+  }
+  50% {
+    transform: translate(-50%, -55%);
+  }
+  100% {
+    transform: translate(-50%, -44%);
+  }
 }
 .bg-large_cloud1 {
   width: 697px; height: 364px;
