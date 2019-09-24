@@ -10,19 +10,49 @@
     position: relative;
   &__wrapper {
     max-width: 1390px;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
   }
 
   .house-container {
-    position: absolute;
+    position: relative;
     width: 480px;
     height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    margin: 0;
+    &__button {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
     &__house-image {
       width: 100%;
       height: auto;
+      z-index: 2;
+    }
+    &__board-image {
+      position: absolute;
+      width: 90px;
+      height: auto;
+      top: 41%;
+      left: 73%;
+      transform: translate(-50%, -50%);
+    }
+    &__mark-image {
+      position: absolute;
+      width: 14px;
+      height: auto;
+      top: 13%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      animation: bounce 5s ease infinite;
     }
   }
   .large-cloud {
@@ -31,33 +61,40 @@
     height: 170px;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: -1;
     transform: translate(-50%, -50%);
-    transition: all 5s linear;
+    transition: all 1s linear;
     &--1 {
-      top: 19%;
-      left: 32%;
+      top: -10%;
+      left: 4%;
       background-image: url('../../../assets/images/css_sprites-large-cloud.png');
       background-position: 0 103%;
+      animation: waving 15s linear infinite;
+      animation-delay: 1s;
 
     }
     &--2 {
-      top: 23%;
-      left: 77%;
+      top: 0;
+      left: 116%;
       background-image: url('../../../assets/images/css_sprites-large-cloud.png');
       background-position: 0 51%;
       height: 110px;
+      animation: waving 11s linear infinite;
+      animation-delay: 0.3s;
     }
     &--3 {
-      top: 74%;
-      left: 74%;
+      top: 95%;
+      left: 124%;
       background-image: url('../../../assets/images/css_sprites-large-cloud.png');
       background-position: 0 21%;
       height: 90px;
+      animation: waving 13s linear infinite;
+      animation-delay: 2.3s;
+
     }
     &--4 {
       top: 45%;
-      left: 76%;
+      left: 119%;
       background-image: url('../../../assets/images/css_sprites-large-cloud.png');
       background-position: 0 0;
       height: 70px;
@@ -76,6 +113,26 @@
   }
   100% {
     transform: translate(-50%, -44%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1) translate(0%, -50%);
+  }
+  6% {
+    transform: scale(1.2, 0.6);
+  }
+  16% {
+    transform: scale(0.8, 1.1) translate(0%, -90%);
+  }
+  25% {
+    transform: scale(1) translate(0%, -50%);
+  }
+  50% {
+    transform: translate(0%, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
   }
 }
 .bg-large_cloud1 {
