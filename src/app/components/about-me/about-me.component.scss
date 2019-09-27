@@ -25,12 +25,36 @@
     margin: 0;
     &__button {
       position: absolute;
-      height: 200px;
-      width: 200px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      //transform: translate(-50%, -50%);
+      border: none;
+      background-color: transparent;
       margin: 0;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      outline: transparent;
+
+      &:hover .house-container__light {
+        background: radial-gradient(circle, rgba(251,239,63,1) 20%, rgba(126,126,65,0) 55%);
+        opacity: 1;
+        transition: all 0.3s linear;
+      }
+    }
+    &__light {
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      top: 44%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s linear;
+      opacity: 0;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(251,239,63,1) 20%, rgba(126,126,65,0) 55%);
+
     }
     &__house-image {
       width: 100%;
