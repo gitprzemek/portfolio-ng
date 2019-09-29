@@ -58,6 +58,19 @@
     bottom: 0;
     margin: 0 auto;
   }
+  &__bg-image6 {
+    position: absolute;
+    background-image: url("../../../assets/images/suuun.png");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 300px;
+    top: 42%;
+    left: 13%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+  }
   &__wave-cont {
     position: absolute;
     background-image: url("../../../assets/images/fale2.png");

@@ -1,9 +1,142 @@
 .about-skills{
-  //background-image: url("../../../assets/images/water jpg.jpg");
-  //background-size: contain;
-  //background-position: center;
-  //background-repeat: no-repeat;
-    height: 100vh;
-  //background-image: radial-gradient( circle farthest-corner at 50% 10%,  rgb(111, 185, 232) 0%, rgba(111, 185, 232, 0.7) 40%, rgb(75, 125, 238) 94% );
+  height: 100vh;
+  position: relative;
   background: linear-gradient(to bottom, #409991 1%,#193946 100%);
+
+  &__wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+  }
+  .light-container {
+    position: relative;
+    &__light {
+      height: 500px;
+      width: 3%;
+      background: linear-gradient(to bottom, rgba(253, 251, 255, 0) 0%, rgba(253, 251, 255, 0.2) 10%, rgba(253, 251, 255, 0.1) 60%, rgba(253, 251, 255, 0) 100%);
+      position: absolute;
+      left: 40%;
+      top: -27px;
+      z-index: 2;
+      transform: skewX(20deg);
+      &--1 {
+        left: -4%;
+        height: 550px;
+      }
+      &--2 {
+        left: 7%;
+        height: 520px;
+      }
+      &--3 {
+        left: 19%;
+        height: 480px;
+      }
+      &--4 {
+        left: 21%;
+        height: 470px;
+      }
+      &--5 {
+        left: 25%;
+      }
+      &--6 {
+        left: 32%;
+        height: 410px;
+      }
+      &--7 {
+        left: 41%;
+        height: 370px;
+      }
+      &--8 {
+        left: 43%;
+        height: 340px;
+      }
+      &--9 {
+        left: 49%;
+        height: 310px;
+      }
+      &--10 {
+        left: 57%;
+        height: 260px;
+      }
+    }
+  }
+  .images-container {
+    &__whale {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 38%;
+      height: 70%;
+      transform: translate(-50%, -46%) rotate(0);
+      animation: whaleAnim 17s ease-in-out infinite;
+
+    }
+    &__image {
+      position: absolute;
+      left: 50%;
+      &--whale {
+        width: 100%;
+        top: 40%;
+        left: 0;
+        opacity: 0.7;
+        transform: translateY(-50%);
+      }
+      &--rocks {
+        width: 80%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+  .bubbles-comp {
+    position: absolute;
+    transform: rotate(12deg) translateX(-50%);
+
+    z-index: 1;
+    &--left {
+      bottom: 7%;
+      left: 27%;
+      height: 170px;
+      width: 40px;
+      opacity: 0.3;
+    }
+    &--mid {
+      bottom: 7%;
+      left: 57%;
+      height: 300px;
+      width: 70px;
+      opacity: 0.9;
+    }
+    &--right {
+      bottom: 1%;
+      left: 79%;
+      height: 230px;
+      width: 50px;
+      opacity: 0.5;
+    }
+    &--top {
+      top: 38%;
+      left: 24%;
+      height: 160px;
+      width: 40px;
+      opacity: 0.4;
+      transform: rotate(6deg) translate(-50%, -50%);
+    }
+  }
+
+}
+@keyframes whaleAnim {
+  0%  {
+    transform: translate(-50%, -46%) rotate(0);
+  }
+  50% {
+    transform: translate(-50%, -54%) rotate(4deg);
+  }
+  100% {
+    transform: translate(-50%, -46%) rotate(0);
+  }
+
 }

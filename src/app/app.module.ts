@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ParticleEffectButtonModule } from "angular-particle-effect-button";
 import { MainNavComponent } from './components/navigations/main-nav/main-nav.component';
 import { SideNavComponent } from './components/navigations/side-nav/side-nav.component';
+import { BubblesComponent } from './components/about-skills/bubbles/bubbles.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SideNavComponent } from './components/navigations/side-nav/side-nav.com
     FooterComponent,
     HeaderComponent,
     MainNavComponent,
-    SideNavComponent
+    SideNavComponent,
+    BubblesComponent
   ],
   imports: [
     BrowserModule,

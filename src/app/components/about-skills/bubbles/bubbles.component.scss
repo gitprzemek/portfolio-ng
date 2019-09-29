@@ -1,0 +1,120 @@
+.bubbles-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .bubble {
+    position: absolute;
+    transform: rotate(45deg) translateX(-50%);
+    background: linear-gradient(to bottom right, rgb(237, 239, 255) 1%, rgba(244, 245, 255, 0.17) 95%);
+    top: 110%;
+    left: 50%;
+    opacity: 1;
+  }
+  .bubble:nth-child(1) {
+    width: 13%;
+    padding-top: 13%;
+    animation: toTopAnimLeft 6s linear infinite;
+  }
+  .bubble:nth-child(2) {
+    width: 13%;
+    padding-top: 13%;
+    animation: toTopAnimRight 6s linear infinite;
+    animation-delay: 3s;
+  }
+  .bubble:nth-child(3) {
+    width: 13%;
+    padding-top: 13%;
+    animation: toTopAnimLeft 6s linear infinite;
+    animation-delay: 2.2s;
+  }
+  .bubble:nth-child(4) {
+    width: 13%;
+    padding-top: 13%;
+    animation: toTopAnimRight 6s linear infinite;
+    animation-delay: 1.2s;
+  }
+  .bubble:nth-child(5) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimLeft 5s linear infinite;
+    animation-delay: 1s;
+  }
+  .bubble:nth-child(6) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimMid 5s linear infinite;
+    animation-delay: 0.4s;
+  }
+  .bubble:nth-child(7) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimRight 5s linear infinite;
+    animation-delay: 1.4s;
+  }
+  .bubble:nth-child(8) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimMid 5s linear infinite;
+    animation-delay: 2.1s;
+  }
+  .bubble:nth-child(9) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimRight 5s linear infinite;
+    animation-delay: 3.1s;
+  }
+  .bubble:nth-child(10) {
+    width: 7%;
+    padding-top: 7%;
+    animation: toTopAnimMid 5s linear infinite;
+    animation-delay: 2.5s;
+  }
+}
+@keyframes toTopAnimLeft {
+  0%  {
+    top: 110%;
+    left: 50%;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 25%;
+    opacity: 0;
+  }
+}
+
+@keyframes toTopAnimMid {
+  0%  {
+    top: 110%;
+    left: 50%;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 51%;
+    opacity: 0;
+  }
+
+}
+@keyframes toTopAnimRight {
+  0%  {
+    top: 110%;
+    left: 50%;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 77%;
+    opacity: 0;
+  }
+}
