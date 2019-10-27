@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-main-nav',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
-
+  @Output() elementToScroll = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit() {
+  }
+  scrollToElementFn(element) {
+    this.elementToScroll.emit(element);
   }
 
 }

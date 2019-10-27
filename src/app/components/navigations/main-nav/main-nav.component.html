@@ -1,8 +1,9 @@
 <nav class="main-nav">
   <div class="main-nav__link-container">
-      <a href="#" class="main-nav__link-container">START</a>
-      <a href="#" class="main-nav__link-container">ABOUT ME</a>
-      <a href="#" class="main-nav__link-container">MY PROJECTS</a>
-      <a href="#" class="main-nav__link-container">MY SKILLS</a>
+      <a href="#" class="main-nav__link">START</a>
+      <a (click)="scrollToElementFn('aboutMe')" class="main-nav__link">ABOUT ME</a>
+      <a (click)="scrollToElementFn('aboutProjects')" class="main-nav__link">MY PROJECTS</a>
+      <a (click)="scrollToElementFn('aboutSkills')" class="main-nav__link">MY SKILLS</a>
+      <a class="main-nav__link">CONTACT</a>
   </div>
 </nav>

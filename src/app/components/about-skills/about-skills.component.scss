@@ -126,6 +126,54 @@
       transform: rotate(6deg) translate(-50%, -50%);
     }
   }
+  &__show-content-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    color: white;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    outline: transparent;
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+  &__dialog {
+    position: absolute;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ffffff;
+    z-index: 999;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    border-radius: 15px;
+    transition: 0.3s all linear;
+  }
+  .showDialog {
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+    width: 95%;
+    height: 95%;
+  }
 
 }
 @keyframes whaleAnim {

@@ -1,7 +1,8 @@
 <!--<app-header></app-header>-->
-<div class="main-site-wrapper">
-  <app-main-nav></app-main-nav>
-  <app-about-me></app-about-me>
-  <app-about-projects></app-about-projects>
-  <app-about-skills></app-about-skills>
+<div class="main-site-wrapper" (wheel)="wheelScrollEvent($event)">
+  <app-main-nav (elementToScroll)="scrollToElement($event)"></app-main-nav>
+  <app-side-nav (elementToScroll)="scrollToElement($event)" [elementSelected] = "element"></app-side-nav>
+  <app-about-me id="aboutMe"></app-about-me>
+  <app-about-projects id="aboutProjects"></app-about-projects>
+  <app-about-skills id="aboutSkills"></app-about-skills>
 </div>

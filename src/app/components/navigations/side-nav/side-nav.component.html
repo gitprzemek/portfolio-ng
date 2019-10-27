@@ -1,3 +1,8 @@
-<p>
-  side-nav works!
-</p>
+<nav class="side-nav">
+  <div class="side-nav__link-container">
+    <a (click)="scrollToElementFn('aboutMe')" class="side-nav__link" [ngClass]="selectedSection === 'aboutMe' ? 'selected' : ''"></a>
+    <a (click)="scrollToElementFn('aboutProjects')" class="side-nav__link" [ngClass]="selectedSection === 'aboutProjects' ? 'selected' : ''"></a>
+    <a (click)="scrollToElementFn('aboutSkills')" class="side-nav__link" [ngClass]="selectedSection === 'aboutSkills' ? 'selected' : ''"></a>
+  </div>
+</nav>
+

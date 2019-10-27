@@ -5,10 +5,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .main-nav__link-container{
+    z-index: 99;
 
+    &__link-container{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
-    .main-nav__link-container{
-
+    &__link{
+      color: white;
+      max-width: 200px;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: black;
+      }
     }
 }

@@ -2,6 +2,12 @@
   background: linear-gradient(to bottom, rgb(82, 138, 255) 0%, rgb(149, 215, 255) 94%);
   height: 100vh;
   position: relative;
+  &__wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+  }
   &__bg-image1 {
     position: absolute;
     background-image: url("../../../assets/images/warstwa5-sun.png");
@@ -83,6 +89,29 @@
     margin: 0 auto;
     border-bottom: 2px solid #409991;
   }
+  &__show-content-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    color: white;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    outline: transparent;
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
   @keyframes slide-clouds1 {
     0% { background-position: 0 100%; }
     100% { background-position: 1220px 100%; }
@@ -90,5 +119,30 @@
   @keyframes slide-clouds2 {
     0% { background-position: 0 100%; }
     100% { background-position: 1220px 100%; }
+  }
+  &__dialog {
+    position: absolute;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ffffff;
+    z-index: 999;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    border-radius: 15px;
+    transition: 0.3s all linear;
+  }
+  .showDialog {
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+    width: 95%;
+    height: 95%;
   }
 }

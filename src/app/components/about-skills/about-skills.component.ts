@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-skills.component.scss']
 })
 export class AboutSkillsComponent implements OnInit {
-
+  showMeDialog = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  showAboutMeDialog(): void {
+    this.showMeDialog = !this.showMeDialog;
+  }
+  closeDialogWindow($event): void {
+    this.showMeDialog = $event;
+  }
 }

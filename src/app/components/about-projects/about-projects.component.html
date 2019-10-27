@@ -1,10 +1,18 @@
 <section class="about-projects">
-  <div class="about-projects__bg-image1"></div>
-  <div class="about-projects__bg-image2"></div>
-  <div class="about-projects__bg-image3"></div>
-  <div class="about-projects__bg-image4"></div>
-  <div class="about-projects__bg-image5"></div>
-  <div class="about-projects__bg-image6"></div>
-  <div class="about-projects__wave-cont"></div>
-  <div class="about-projects__wrapper"></div>
+  <div class="about-projects__wrapper">
+    <app-about-projects-dialog (closeDialog)="closeDialogWindow($event)" class="about-projects__dialog"
+                         [ngClass]="{'showDialog': showMeDialog }" >
+
+    </app-about-projects-dialog>
+  </div>
+    <div class="about-projects__bg-image1"></div>
+    <div class="about-projects__bg-image2"></div>
+    <div class="about-projects__bg-image3"></div>
+    <div class="about-projects__bg-image4"></div>
+    <div class="about-projects__bg-image5"></div>
+    <div class="about-projects__bg-image6"></div>
+    <div class="about-projects__wave-cont"></div>
+    <div class="about-projects__wrapper"></div>
+    <button class="about-projects__show-content-btn" (click)="showAboutMeDialog()"><mat-icon>zoom_out_map</mat-icon></button>
+
 </section>

@@ -1,5 +1,9 @@
 <section class="about-skills">
   <div class="about-skills__wrapper">
+    <app-about-skills-dialog (closeDialog)="closeDialogWindow($event)" class="about-skills__dialog"
+                               [ngClass]="{'showDialog': showMeDialog }" >
+
+    </app-about-skills-dialog>
     <div class="light-container">
       <div class="light-container__light light-container__light--1"></div>
       <div class="light-container__light light-container__light--2"></div>
@@ -25,4 +29,5 @@
       <app-bubbles class="bubbles-comp bubbles-comp--right"></app-bubbles>
     </div>
   </div>
+  <button class="about-skills__show-content-btn" (click)="showAboutMeDialog()"><mat-icon>zoom_out_map</mat-icon></button>
 </section>
