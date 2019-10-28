@@ -8,42 +8,40 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 export class AppComponent {
   element: any;
   title = 'portfolio-ng';
+  animating = false;
 
   scrollToElement($element): void {
-    console.log($element);
     this.element = $element;
     const element = document.getElementById($element);
     element.scrollIntoView({behavior: 'smooth'});
-    console.log(this.element, element.offsetTop, window.pageYOffset);
   }
   wheelScrollEvent($event) {
     $event.preventDefault();
-    console.log($event);
+    if (this.animating ){
+      return false;
+    }
+    this.animating = true;
     const viewH = window.innerHeight;
     const windowOffset = window.pageYOffset;
     const scrollByPxDown = windowOffset + viewH;
     const scrollByPxUp = windowOffset - viewH;
-    console.log(viewH, windowOffset);
-    console.log('scrollByPxUp', scrollByPxUp);
-    console.log('scrollByPxDown', scrollByPxDown);
-    console.log(document.documentElement.scrollHeight);
     if ($event.deltaY > 0) {
       window.scrollTo({top: scrollByPxDown, behavior: 'smooth'});
-      console.log('DOWN');
+      setTimeout(() => { this.animating = false; }, 800);
+      if (windowOffset === 0) {
+        this.element = 'aboutProjects';
+      } else if (windowOffset >= viewH && (windowOffset < (viewH * 2))) {
+        this.element = 'aboutSkills';
+      }
     } else {
       window.scrollTo({top:  scrollByPxUp, behavior: 'smooth'});
-      console.log('UP');
+      setTimeout(() => { this.animating = false; }, 800);
+      if (windowOffset >= viewH && (windowOffset < (viewH * 2))) {
+        this.element = 'aboutMe';
+      } else if (windowOffset >= (viewH * 2)) {
+        this.element = 'aboutProjects';
+      }
     }
-    console.log('windowOffset', windowOffset);
-    if (windowOffset === 0) {
-      this.element = 'aboutMe';
-    } else if (windowOffset >= viewH && (windowOffset < (viewH * 2))) {
-      this.element = 'aboutProjects';
-    } else if (windowOffset >= (viewH * 2)) {
-      console.log('aboutSkills');
-      this.element = 'aboutSkills';
-    }
-
   }
   scrollMouseEvent() {
     const rect = this.element.getBoundingClientRect();
