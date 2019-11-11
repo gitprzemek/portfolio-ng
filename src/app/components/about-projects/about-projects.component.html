@@ -1,6 +1,8 @@
 <section class="about-projects">
   <div class="about-projects__wrapper">
-    <app-about-projects-dialog (closeDialog)="closeDialogWindow($event)" class="about-projects__dialog"
+    <app-about-projects-dialog (closeDialog)="closeDialogWindow($event)"
+                               [showContent]="showContent"
+                               class="about-projects__dialog"
                          [ngClass]="{'showDialog': showMeDialog }" >
 
     </app-about-projects-dialog>

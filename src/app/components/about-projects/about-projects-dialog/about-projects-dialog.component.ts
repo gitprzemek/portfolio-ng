@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-about-projects-dialog',
@@ -7,6 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class AboutProjectsDialogComponent implements OnInit {
   @Output() closeDialog = new EventEmitter<boolean>();
+  @Input() showContent: boolean;
   constructor() { }
 
   ngOnInit() {
