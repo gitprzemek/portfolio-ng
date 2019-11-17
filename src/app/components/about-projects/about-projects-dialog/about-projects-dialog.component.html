@@ -1,14 +1,34 @@
 <section class="about-projects-dg" *ngIf="showContent">
   <button class="close-dialog-btn" (click)="closeDialogFn()"><mat-icon>close</mat-icon></button>
+  <img class="shape1" src="../../../../assets/images/shape1.svg" alt="shape">
+  <img class="shape2" src="../../../../assets/images/shape2.svg" alt="shape">
   <div class="about-projects-dg__content">
+    <button (click)="goPrev()" class="about-projects-dg__btn about-projects-dg__btn--left" [class.disable]="currentSlide === 1"><mat-icon>keyboard_arrow_left</mat-icon></button>
+    <button (click)="goNext()" class="about-projects-dg__btn about-projects-dg__btn--right" [class.disable]="currentSlide === projects.length"><mat-icon>keyboard_arrow_right</mat-icon></button>
     <h1 class="content__title"><span class="content__icon-cont"><mat-icon>important_devices</mat-icon></span><span>My projects</span></h1>
-<!--    <img class="content__my-photo" src="../../../../assets/images/Przemek-Szczepanski1.jpg" alt="me">-->
-<!--    <p class="content__subtitle">Hello !</p>-->
-<!--    <p class="content__text">My name is Przemysław Szczepański and I am a front-end developer.<br>-->
-<!--      A graduate of the Kielce University of Technology. I've always wanted to do what I like, so I do everything to do it! <br>-->
-<!--      In programming, I am most satisfied with the combination of clean code with an effective and eye-catching design.<br>-->
-<!--      Currently, I am focusing on grinding and expanding knowledge in the Angular framework.-->
-<!--      In my free time I relax while watching a comedy, for example with Jim Carrey or I care that my body will still look and fit my old clothes. In addition, a-->
-<!--      great fan of Blizzard, in particular their classic titles. </p>-->
+    <div class="about-projects-dg__cards-cont">
+
+      <div class="about-projects-dg__card" *ngFor="let card of projects" [ngStyle]="{'right': positionSlide + '%'}">
+        <div class="card__left">
+          <h2 class="card__title">{{card.name}}</h2>
+          <p class="card_par">{{card.description}}</p>
+          <p class="card_par">Used technologies and optimization:</p>
+          <div class="card__list">
+            <span class="card__li-item" *ngFor="let tech of card.technologiesUsed; let i = index">
+              {{tech}}
+            </span>
+          </div>
+          <div class="card__links">
+            <a class="card__btn" [href]="card.linkToGitCodeProject" target="_blank">CODE</a>
+            <a class="card__btn" [href]="card.linkToGitDemo" target="_blank">DEMO</a>
+          </div>
+        </div>
+        <div class="card__right">
+          <img class="card__image" [src]="card.image" alt="image">
+        </div>
+
+
+      </div>
+    </div>
   </div>
 </section>

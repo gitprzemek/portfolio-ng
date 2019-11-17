@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material';
 import { AboutProjectsDialogComponent } from './components/about-projects/about-projects-dialog/about-projects-dialog.component';
 import { AboutSkillsDialogComponent } from './components/about-skills/about-skills-dialog/about-skills-dialog.component';
+import {MainServiceService} from './shared/services/main-service.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { AboutSkillsDialogComponent } from './components/about-skills/about-skil
     BrowserAnimationsModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    MainServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
